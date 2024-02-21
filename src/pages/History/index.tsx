@@ -3,7 +3,12 @@ import { ptBR } from 'date-fns/locale';
 import { useContext } from 'react';
 
 import { CycleContext } from '../../contexts/CyclesContext';
-import { HistoryContainer, HistoryList, Status } from './styles';
+import {
+  EmptyContainer,
+  HistoryContainer,
+  HistoryList,
+  Status,
+} from './styles';
 
 export function History() {
   const { cycles } = useContext(CycleContext);
@@ -49,6 +54,7 @@ export function History() {
             })}
           </tbody>
         </table>
+        {cycles.length <= 0 && <EmptyContainer>Nenhuma tafera</EmptyContainer>}
       </HistoryList>
     </HistoryContainer>
   );

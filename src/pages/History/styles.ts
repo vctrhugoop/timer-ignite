@@ -82,3 +82,14 @@ export const Status = styled.span<StatusProps>`
       props.theme[STATUS_COLORS[props.statusColor]]};
   }
 `;
+
+export const EmptyContainer = styled.div`
+  border: 1px solid ${(props) => props.theme['gray-700']};
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
